@@ -1,6 +1,10 @@
 @import "tailwindcss" prefix(tw) important;
 @import "tw-animate-css";
 
+html {
+  font-size: 16px !important;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -118,7 +122,8 @@
     @apply tw:m-0;
   }
   * {
-    @apply tw:border-border tw:outline-ring/50;
+    border-color: var(--border);
+    outline-color: color-mix(in oklab, var(--ring) 50%, transparent);
   }
   body {
     @apply tw:bg-background tw:text-foreground;
